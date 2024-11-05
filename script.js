@@ -1,5 +1,5 @@
 let speed = 300; // Velocidad predeterminada en milisegundos
-let timer = 180; // 3 minutos en segundos
+let timer = 10; // 3 minutos en segundos
 let timerInterval;
 let currentIndex = 0;
 let lines = [
@@ -41,6 +41,7 @@ function startTimer() {
         if (timer <= 0) {
             clearInterval(timerInterval);
             alert("¡Tiempo terminado!");
+            final();
         }
     }, 1000);
 }
@@ -100,4 +101,10 @@ function highlightLine(line, callback) {
         line.classList.remove('highlight'); // Quita el fondo después de la duración
         callback(); // Llama a la siguiente acción
     }, speed);
+}
+function final(){
+    document.getElementById("exerciseArea").classList.add("hidden");
+    document.getElementById("p1").classList.add("hidden");
+    document.getElementById("div1").classList.add("hidden");
+    document.getElementById("timer").classList.remove("hidden");
 }

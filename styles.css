@@ -24,9 +24,12 @@ body {
 }
 
 #exerciseArea {
+    display: flex;
+    flex-direction: column;
     position: relative;
     margin-top: 20px;
     overflow: hidden;
+    align-items: center;
 }
 
 #fixationGuide {
@@ -36,8 +39,9 @@ body {
     transition: transform 0.3s ease; /* Animación al hacer hover */
 }
 
-#fixationGuide:hover {
-    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+#puntos{
+    height: 40px;
+    align-self: center;
 }
 
 .line {
@@ -81,7 +85,7 @@ body {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 /* Estilos para botones */
@@ -102,4 +106,63 @@ button {
 
 button:hover {
     background-color: #45a049; /* Color más oscuro al pasar el mouse */
+}
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    #fixationGuide {
+        height: 50px;
+    }
+    #puntos {
+        width: 430px;
+    }
+
+    .line {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #timer {
+        font-size: 20px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    #textArea div{
+        margin: 0px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        width: 95%;
+    }
+
+    #fixationGuide {
+        height: 40px;
+    }
+    #puntos {
+        width: 330px;
+    }
+
+    .line {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    #timer {
+        font-size: 18px;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
 }
