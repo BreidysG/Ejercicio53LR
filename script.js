@@ -1,5 +1,5 @@
 let speed = 300; // Velocidad predeterminada en milisegundos
-let timer = 10; // 3 minutos en segundos
+let timer = 180; // 3 minutos en segundos
 let timerInterval;
 let currentIndex = 0;
 let lines = [
